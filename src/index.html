@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-prompt">
+    <nav class="fixed top-4 z-50 w-full flex flex-col items-center justify-center">
+        <div class="flex w-full items-center justify-between overflow-y-hidden p-4 backdrop-blur-lg lg:m-2 lg:w-[50rem] lg:rounded-full lg:shadow-lg">
+            <a href="#"> logo</a>
+            <div class="hidden space-x-6 lg:flex">
+                <a href="#" data-scroll="section1" class="text-sm hover:opacity-50">Home</a>
+                <a href="#" data-scroll="section2" class="text-sm border-l-2 border-neutral-300/20 pl-2 hover:opacity-50">About</a>
+                <a href="#quiz" data-scroll="section3" class="text-sm border-l-2 border-neutral-300/20 pl-2 hover:opacity-50">Quiz</a>
+                <a href="#" data-scroll="section3" class="text-sm border-l-2 border-neutral-300/20 pl-2 hover:opacity-50">Contact</a>
+
+            </div>
+            <div class="lg:hidden">
+                <button id="mobile-menu-button">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden w-full backdrop-blur-lg lg:hidden">
+            <a href="#" data-scroll="section1" class="block p-4 uppercase tracking-tighter hover:bg-gray-200">Home</a>
+            <a href="#" data-scroll="section2" class="block p-4 uppercase tracking-tighter hover:bg-gray-200">About</a>
+            <a href="#" data-scroll="section3" class="block p-4 uppercase tracking-tighter hover:bg-gray-200">Contact</a>
+        </div>
+    </nav>
+
+    <div class="flex relative w-screen h-screen items-center justify-center bg-try bg-left bg-cover overflow-hidden">
+      <!-- Left Content -->
+      <div class="flex flex-col items-start justify-center p-8 max-w-lg">
+        <h1 class="text-5xl font-bold tracking-tighter bg-gradient-to-b from-[#253364] to-[#0c40ea] text-transparent bg-clip-text leading-tight">
+          Unleash Your Inner Genius!
+        </h1>
+        <p class="text-lg tracking-tighter mt-4 text-[#010D3E] leading-relaxed">
+          Embark on epic quiz adventures where every question brings you closer to unlocking awesome surprises! Ready to conquer the quiz galaxy?
+        </p>
+        <button class="bg-gradient-to-tr from-[#253364] to-[#0c40ea] text-white px-6 py-3 rounded-lg mt-6 transition-transform duration-300 hover:scale-105">
+          Start Your Adventure
+        </button>
+      </div>
+    </div>
+    
+    
+
+  
+
+  <!--
+  Heads up! 👋
+
+  Plugins:
+    - @tailwindcss/forms
+-->
+    
+<div id="quiz" class="flex h-screen w-screen flex-row items-center justify-center bg-center bg-slate-950 text-white gap-8">
+  <div class="card-wrapper h-[350px] w-[300px] p-6 bg-gray-800 rounded-lg shadow-lg">
+    <div class="card-content flex flex-col items-center justify-center text-xs">
+      <h3 id="question-number" class="text-lg font-bold mb-4">Question 1</h3>
+      <p id="question-text" class="text-gray-300 mb-4 text-center">What is the capital of France?</p>
+
+      <div id="answer-buttons" class="space-y-4 w-full p-4">
+        <!-- Buttons will be dynamically added here -->
+      </div>
+
+      
+      <button id="next-btn" class="mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full hidden">Next</button>
+          <button id="restart-btn" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full hidden">Restart</button>
+    </div>
+  </div>
+  </div>
+
+
+<section class="bg-white dark:bg-gray-900">
+    <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
+      <aside class="relative block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
+        <img
+          alt=""
+          src="./assets/landscape/DrawKit Vector Illustration Landscape & Scenery (3).png"
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+      </aside>
+  
+      <main
+        class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6"
+      >
+        <div class="max-w-xl lg:max-w-3xl">
+      
+          <h1 class="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl dark:text-white">
+            Welcome to Quiz world
+          </h1>
+  
+          <p class="mt-4 leading-relaxed text-gray-500 dark:text-gray-400">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam dolorum aliquam,
+            quibusdam aperiam voluptatum.
+          </p>
+  
+          <form action="#" class="mt-8 grid grid-cols-6 gap-6">
+            <div class="col-span-6 sm:col-span-3">
+              <label
+                for="FirstName"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-200"
+              >
+                First Name
+              </label>
+  
+              <input
+                type="text"
+                id="FirstName"
+                name="first_name"
+                class="mt-1 w-full rounded-md p-2 border-gray-200 bg-white text-sm text-gray-700 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200"
+              />
+            </div>
+  
+            <div class="col-span-6 sm:col-span-3">
+              <label
+                for="LastName"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-200"
+              >
+                Last Name
+              </label>
+  
+              <input
+                type="text"
+                id="LastName"
+                name="last_name"
+                class="mt-1 w-full rounded-md p-2 border-gray-200 bg-white text-sm text-gray-700 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200"
+              />
+            </div>
+  
+            <div class="col-span-6">
+              <label for="Email" class="block text-sm font-medium text-gray-700 dark:text-gray-200">
+                Email
+              </label>
+  
+              <input
+                type="email"
+                id="Email"
+                name="email"
+                class="mt-1 w-full rounded-md p-2 border-gray-200 bg-white text-sm text-gray-700 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200"
+              />
+            </div>
+  
+            <div class="col-span-6 sm:col-span-3">
+              <label
+                for="Password"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-200"
+              >
+                Password
+              </label>
+  
+              <input
+                type="password"
+                id="Password"
+                name="password"
+                class="mt-1 w-full p-2 rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200"
+              />
+            </div>
+  
+            <div class="col-span-6 sm:col-span-3">
+              <label
+                for="PasswordConfirmation"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-200"
+              >
+                Password Confirmation
+              </label>
+  
+              <input
+                type="password"
+                id="PasswordConfirmation"
+                name="password_confirmation"
+                class="mt-1 w-full rounded-md p-2 border-gray-200 bg-white text-sm text-gray-700 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200"
+              />
+            </div>
+  
+            <div class="col-span-6">
+              <label for="MarketingAccept" class="flex gap-4">
+                <input
+                  type="checkbox"
+                  id="MarketingAccept"
+                  name="marketing_accept"
+                  class="size-5 rounded-md p-2 border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:focus:ring-offset-gray-900"
+                />
+  
+                <span class="text-sm text-gray-700 dark:text-gray-200">
+                  I want to receive emails about events, product updates and company announcements.
+                </span>
+              </label>
+            </div>
+  
+            <div class="col-span-6">
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                By creating an account, you agree to our
+                <a href="#" class="text-gray-700 underline dark:text-gray-200 ">
+                  terms and conditions
+                </a>
+                and
+                <a href="#" class="text-gray-700 underline dark:text-gray-200"> privacy policy </a>.
+              </p>
+            </div>
+  
+            <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
+              <button
+                class="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white"
+              >
+                Create an account
+              </button>
+  
+              <p class="mt-4 text-sm text-gray-500 sm:mt-0 dark:text-gray-400">
+                Already have an account?
+                <a href="#" class="text-gray-700 underline dark:text-gray-200">Log in</a>.
+              </p>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </section>
+  <script src="index.js"> </script>
+</body>
+</html>
